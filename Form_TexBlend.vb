@@ -17,7 +17,13 @@ Public Class Form_TexBlend
             Me.Pic_TexBlendMan.Visible = True
             Me.Pic_TexBlendMan.Image = My.Resources.TexBlendCustom
             Me.Btn_Press.Visible = True
-            Process.Start(startInfo)
+
+            Try
+                Process.Start(startInfo)
+            Catch ex As Exception
+                MsgBox("Start TexBlend manually and follow the procedure")
+            End Try
+
             Me.Tmr_Custom.Enabled = True
         Else
             If Data.Bool_FemaleGloss = True And Data.Bool_ManGloss = True Then
@@ -25,7 +31,13 @@ Public Class Form_TexBlend
                 Me.Pic_TexBlendFem.Visible = True
                 Me.Pic_TexBlendFem.Image = My.Resources.TexBlendFem
                 Me.Lbl_TexBlend.Text = "Configure TexBlend as the image and press Blend Image then press the button down here"
-                Process.Start(startInfo)
+
+                Try
+                    Process.Start(startInfo)
+                Catch ex As Exception
+                    MsgBox("Start TexBlend manually and follow the procedure")
+                End Try
+
                 Me.Btn_Press.Visible = True
                 Me.Tmr_FemToMan.Enabled = True
 
@@ -34,7 +46,13 @@ Public Class Form_TexBlend
                     Me.Pic_TexBlendFem.Visible = True
                     Me.Pic_TexBlendFem.Image = My.Resources.TexBlendFem
                     Me.Lbl_TexBlend.Text = "Configure TexBlend as the image and press Blend Image then press the button down here"
-                    Process.Start(startInfo)
+
+                    Try
+                        Process.Start(startInfo)
+                    Catch ex As Exception
+                        MsgBox("Start TexBlend manually and follow the procedure")
+                    End Try
+
                     Me.Btn_Press.Visible = True
                     Me.Tmr_Fem.Enabled = True
                 Else
@@ -46,7 +64,13 @@ Public Class Form_TexBlend
                     Me.Pic_TexBlendMan.Visible = True
                     Me.Pic_TexBlendMan.Image = My.Resources.TexBlendMan
                     Me.Btn_Press.Visible = True
-                    Process.Start(startInfo)
+
+                    Try
+                        Process.Start(startInfo)
+                    Catch ex As Exception
+                        MsgBox("Start TexBlend manually and follow the procedure")
+                    End Try
+
                     Me.Tmr_Man.Enabled = True
                 End If
             End If
@@ -71,7 +95,13 @@ Public Class Form_TexBlend
             Me.Pic_TexBlendMan.Visible = True
             Me.Pic_TexBlendMan.Image = My.Resources.TexBlendMan
             Me.Btn_Press.Visible = True
-            Process.Start(startInfo)
+
+            Try
+                Process.Start(startInfo)
+            Catch ex As Exception
+                MsgBox("Start TexBlend manually and follow the procedure")
+            End Try
+
             Me.Tmr_ManFromFem.Enabled = True
             Me.Tmr_FemToMan.Enabled = False
         End If
