@@ -32,6 +32,11 @@ int main()
     int g, i, c;
     char chose;
     
+    remove("customrace/abc.old");
+    remove("TexBlend/Library/Head/Specular/abc.old");
+    remove("TexBlend/Source/Head/Specular/abc.old");
+    remove("textures/actors/character/female/abc.old");
+    
     do
     {
         cout<<"Install or Uninstal mod <i/u>? ";

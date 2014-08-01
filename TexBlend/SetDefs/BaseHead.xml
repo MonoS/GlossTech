@@ -32,7 +32,7 @@
 			<FileName>femalehead_s</FileName>
 			<FileFormat>dds</FileFormat>
 			<Size>2048</Size>
-			<CompressTex>1</CompressTex>
+			<CompressTex>0</CompressTex>
 			<HasAlpha>0</HasAlpha>
 		</Channel>
 		<Channel Name="Skin">					<!-- Skin map -->
