@@ -23,7 +23,6 @@ Partial Class Form_TexBlend
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Btn_Exit = New System.Windows.Forms.Button()
         Me.Lbl_TexBlend = New System.Windows.Forms.Label()
         Me.Btn_Press = New System.Windows.Forms.Button()
         Me.Pic_TexBlendFem = New System.Windows.Forms.PictureBox()
@@ -35,15 +34,6 @@ Partial Class Form_TexBlend
         CType(Me.Pic_TexBlendFem, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_TexBlendMan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Btn_Exit
-        '
-        Me.Btn_Exit.Location = New System.Drawing.Point(208, 632)
-        Me.Btn_Exit.Name = "Btn_Exit"
-        Me.Btn_Exit.Size = New System.Drawing.Size(75, 23)
-        Me.Btn_Exit.TabIndex = 0
-        Me.Btn_Exit.Text = "Exit"
-        Me.Btn_Exit.UseVisualStyleBackColor = True
         '
         'Lbl_TexBlend
         '
@@ -102,12 +92,11 @@ Partial Class Form_TexBlend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 667)
+        Me.ClientSize = New System.Drawing.Size(490, 639)
         Me.Controls.Add(Me.Pic_TexBlendMan)
         Me.Controls.Add(Me.Btn_Press)
         Me.Controls.Add(Me.Lbl_TexBlend)
         Me.Controls.Add(Me.Pic_TexBlendFem)
-        Me.Controls.Add(Me.Btn_Exit)
         Me.Name = "Form_TexBlend"
         Me.Text = "TexBlend"
         CType(Me.Pic_TexBlendFem, System.ComponentModel.ISupportInitialize).EndInit()
@@ -116,7 +105,6 @@ Partial Class Form_TexBlend
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Btn_Exit As System.Windows.Forms.Button
     Friend WithEvents Pic_TexBlendFem As System.Windows.Forms.PictureBox
     Friend WithEvents Lbl_TexBlend As System.Windows.Forms.Label
     Friend WithEvents Btn_Press As System.Windows.Forms.Button
