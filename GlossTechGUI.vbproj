@@ -104,6 +104,36 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_ErrorUninstalCustomMis.Designer.vb">
+      <DependentUpon>Form_ErrorUninstalCustomMis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorUninstalCustomMis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ErrorCustom.Designer.vb">
+      <DependentUpon>Form_ErrorCustom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorCustom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ErrorCustomMis.Designer.vb">
+      <DependentUpon>Form_ErrorCustomMis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorCustomMis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ErrorMisFile.Designer.vb">
+      <DependentUpon>Form_ErrorMisFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorMisFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_End.Designer.vb">
+      <DependentUpon>Form_End.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_End.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_TexBlend.Designer.vb">
       <DependentUpon>Form_TexBlend.vb</DependentUpon>
     </Compile>
@@ -189,6 +219,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form_ErrorCustom.resx">
+      <DependentUpon>Form_ErrorCustom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_End.resx">
+      <DependentUpon>Form_End.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ErrorCustomMis.resx">
+      <DependentUpon>Form_ErrorCustomMis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ErrorMisFile.resx">
+      <DependentUpon>Form_ErrorMisFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ErrorUninstalCustomMis.resx">
+      <DependentUpon>Form_ErrorUninstalCustomMis.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ErrorUninstall.resx">
       <DependentUpon>Form_ErrorUninstall.vb</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +332,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TexBlendMan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TexBlendCustom.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

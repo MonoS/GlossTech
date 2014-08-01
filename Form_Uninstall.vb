@@ -63,14 +63,16 @@ Public Class Form_Uninstall
             End If
 
             Me.Lbl_Progress.Text = Me.Lbl_Progress.Text & "All done!"
-            Me.Btn_Exit.Visible = True
+            Form_End.Show()
+            Form_End.Lbl_Finish.Text = "Congratulation, you've succesfully uninstalled GlossTech"
+            Me.Close()
         Else
             Form_ErrorUninstall.Show()
             Me.Enabled = False
         End If
     End Sub
 
-    Private Sub Btn_Exit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Exit.Click
+    Private Sub Btn_Exit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
 End Class

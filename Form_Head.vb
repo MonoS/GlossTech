@@ -77,6 +77,7 @@ Public Class Form_Head
 
             FileOpen(1, "textures/actors/character/female/femalebody_1_s.dds", OpenMode.Binary, OpenAccess.Write)
 
+
             i = 0
             Do While i < 128
                 FilePut(1, Data.header_body(i), )
@@ -93,13 +94,14 @@ Public Class Form_Head
 
             FileCopy("textures/actors/character/female/femalebody_1_s.dds", "textures/actors/character/female/femalehands_1_s.dds")
             If Data.Bool_HeadAll = True Then
+                File.Delete("textures/actors/character/female/femalehead_s.dds")
                 FileCopy("textures/actors/character/female/femalebody_1_s.dds", "textures/actors/character/female/femalehead_s.dds")
             End If
 
             If Data.Bool_HeadMesh = True Then
                 'Me.Lbl_Progress.Text = Me.Lbl_Progress.Text & "Creating head mesh" & vbNewLine
 
-                Data.Do_Head_Mesh(True, gloss_fem)
+                Data.Do_Head_Mesh(1, gloss_fem)
 
             End If
         Else
@@ -168,13 +170,14 @@ Public Class Form_Head
 
             FileCopy("textures/actors/character/male/malebody_1_s.dds", "textures/actors/character/male/malehands_1_s.dds")
             If Data.Bool_HeadAll = True Then
+                File.Delete("textures/actors/character/male/malehead_s.dds")
                 FileCopy("textures/actors/character/male/malebody_1_s.dds", "textures/actors/character/male/malehead_s.dds")
             End If
 
             If Data.Bool_HeadMesh = True Then
                 'Me.Lbl_Progress.Text = Me.Lbl_Progress.Text & "Creating head mesh" & vbNewLine
 
-                Data.Do_Head_Mesh(False, gloss_man)
+                Data.Do_Head_Mesh(2, gloss_man)
 
             End If
 
@@ -184,6 +187,9 @@ Public Class Form_Head
 
         If Data.Bool_HeadMesh = True Then
             Form_TexBlend.Show()
+        Else
+            Form_End.Show()
+            Form_End.Lbl_Finish.Text = "Congratulation, you've succesfully installed GlossTech"
         End If
 
         Me.Close()
@@ -191,5 +197,13 @@ Public Class Form_Head
 
     Private Sub Btn_OpenManMesh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_OpenManMesh.Click
         System.Diagnostics.Process.Start("malehead_base.dds")
+    End Sub
+
+    Private Sub Rad_HeadAll_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rad_HeadAll.CheckedChanged
+
+    End Sub
+
+    Private Sub Form_Head_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

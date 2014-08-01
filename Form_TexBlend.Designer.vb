@@ -31,6 +31,7 @@ Partial Class Form_TexBlend
         Me.Tmr_ManFromFem = New System.Windows.Forms.Timer(Me.components)
         Me.Tmr_Man = New System.Windows.Forms.Timer(Me.components)
         Me.Tmr_Fem = New System.Windows.Forms.Timer(Me.components)
+        Me.Tmr_Custom = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Pic_TexBlendFem, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_TexBlendMan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -88,6 +89,10 @@ Partial Class Form_TexBlend
         '
         Me.Tmr_Fem.Interval = 200
         '
+        'Tmr_Custom
+        '
+        Me.Tmr_Custom.Interval = 200
+        '
         'Form_TexBlend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,4 +118,5 @@ Partial Class Form_TexBlend
     Friend WithEvents Tmr_ManFromFem As System.Windows.Forms.Timer
     Friend WithEvents Tmr_Man As System.Windows.Forms.Timer
     Friend WithEvents Tmr_Fem As System.Windows.Forms.Timer
+    Friend WithEvents Tmr_Custom As System.Windows.Forms.Timer
 End Class

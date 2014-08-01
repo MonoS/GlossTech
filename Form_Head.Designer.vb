@@ -24,6 +24,7 @@ Partial Class Form_Head
     Private Sub InitializeComponent()
         Me.Lbl_Title = New System.Windows.Forms.Label()
         Me.Group_Mesh = New System.Windows.Forms.GroupBox()
+        Me.Btn_OpenManMesh = New System.Windows.Forms.Button()
         Me.Lbl_ExpOpen = New System.Windows.Forms.Label()
         Me.Btn_OpenFemMesh = New System.Windows.Forms.Button()
         Me.Lbl_ExpIntensity = New System.Windows.Forms.Label()
@@ -34,7 +35,6 @@ Partial Class Form_Head
         Me.Rad_HeadAll = New System.Windows.Forms.RadioButton()
         Me.Rad_HeadMesh = New System.Windows.Forms.RadioButton()
         Me.Btn_Next = New System.Windows.Forms.Button()
-        Me.Btn_OpenManMesh = New System.Windows.Forms.Button()
         Me.Group_Mesh.SuspendLayout()
         Me.Group_Head.SuspendLayout()
         Me.SuspendLayout()
@@ -65,6 +65,15 @@ Partial Class Form_Head
         Me.Group_Mesh.TabStop = False
         Me.Group_Mesh.Text = "Mesh option"
         Me.Group_Mesh.Visible = False
+        '
+        'Btn_OpenManMesh
+        '
+        Me.Btn_OpenManMesh.Location = New System.Drawing.Point(244, 67)
+        Me.Btn_OpenManMesh.Name = "Btn_OpenManMesh"
+        Me.Btn_OpenManMesh.Size = New System.Drawing.Size(118, 23)
+        Me.Btn_OpenManMesh.TabIndex = 6
+        Me.Btn_OpenManMesh.Text = "Modify man mesh"
+        Me.Btn_OpenManMesh.UseVisualStyleBackColor = True
         '
         'Lbl_ExpOpen
         '
@@ -168,15 +177,6 @@ Partial Class Form_Head
         Me.Btn_Next.TabIndex = 8
         Me.Btn_Next.Text = "Start glossing"
         Me.Btn_Next.UseVisualStyleBackColor = True
-        '
-        'Btn_OpenManMesh
-        '
-        Me.Btn_OpenManMesh.Location = New System.Drawing.Point(244, 67)
-        Me.Btn_OpenManMesh.Name = "Btn_OpenManMesh"
-        Me.Btn_OpenManMesh.Size = New System.Drawing.Size(118, 23)
-        Me.Btn_OpenManMesh.TabIndex = 6
-        Me.Btn_OpenManMesh.Text = "Modify man mesh"
-        Me.Btn_OpenManMesh.UseVisualStyleBackColor = True
         '
         'Form_Head
         '

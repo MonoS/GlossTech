@@ -13,25 +13,43 @@
     Public Bool_HeadAll As Boolean
     Public Bool_HeadMesh As Boolean
 
+    Public String_CustomBody As String
+    Public String_CustomHands As String
+    Public String_CustomHead As String
+
+    Public Value_CustomGloss As Integer
+    Public Int_CustomType As Integer
+    Public Int_CustomHeadType As Integer
+    Public Bool_Custom As Boolean
+
     Public header_body As Byte() = New Byte() {68, 68, 83, 32, 124, 0, 0, 0, 15, 16, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 255, 0, 0, 255, 0, 0, 255, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     Public header_head As Byte() = New Byte() {68, 68, 83, 32, 124, 0, 0, 0, 15, 16, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 65, 0, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 255, 0, 0, 255, 0, 0, 255, 0, 0, 0, 0, 0, 0, 255, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
     Public Const zero As Byte = 0
     Public Const max As Byte = 255
 
-    Public Function Do_Head_Mesh(ByVal fem As Boolean, ByVal gloss As Byte)
+    Public Function Do_Head_Mesh(ByVal type As Integer, ByVal gloss As Byte)
 
         Dim i As Integer
         Dim c As Byte
 
-        If fem = True Then
-            FileOpen(1, "femalehead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
-            FileOpen(2, "TexBlend/Library/Head/Specular/femalehead_s.dds", OpenMode.Binary)
-        Else
-            FileOpen(1, "malehead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
-            FileOpen(2, "TexBlend/Library/Head/Specular/malehead_s.dds", OpenMode.Binary)
-        End If
-
+        Select Case type
+            Case 1
+                FileOpen(1, "femalehead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
+                FileOpen(2, "TexBlend/Library/Head/Specular/femalehead_s.dds", OpenMode.Binary)
+            Case 2
+                FileOpen(1, "malehead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
+                FileOpen(2, "TexBlend/Library/Head/Specular/malehead_s.dds", OpenMode.Binary)
+            Case 3
+                FileOpen(1, "customhead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
+                FileOpen(2, "TexBlend/Library/Head/Specular/customhead_s.dds", OpenMode.Binary)
+            Case 4
+                FileOpen(1, "femalehead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
+                FileOpen(2, "TexBlend/Library/Head/Specular/customhead_s.dds", OpenMode.Binary)
+            Case 5
+                FileOpen(1, "malehead_base.dds", OpenMode.Random, OpenAccess.Read, , 1)
+                FileOpen(2, "TexBlend/Library/Head/Specular/customhead_s.dds", OpenMode.Binary)
+        End Select
 
         Seek(1, 129)
 

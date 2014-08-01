@@ -98,7 +98,6 @@ Partial Class Form_Main
         'Rad_InstCust
         '
         Me.Rad_InstCust.AutoSize = True
-        Me.Rad_InstCust.Enabled = False
         Me.Rad_InstCust.Location = New System.Drawing.Point(285, 217)
         Me.Rad_InstCust.Name = "Rad_InstCust"
         Me.Rad_InstCust.Size = New System.Drawing.Size(128, 17)
@@ -132,7 +131,6 @@ Partial Class Form_Main
         'Rad_UninstCust
         '
         Me.Rad_UninstCust.AutoSize = True
-        Me.Rad_UninstCust.Enabled = False
         Me.Rad_UninstCust.Location = New System.Drawing.Point(304, 289)
         Me.Rad_UninstCust.Name = "Rad_UninstCust"
         Me.Rad_UninstCust.Size = New System.Drawing.Size(141, 17)

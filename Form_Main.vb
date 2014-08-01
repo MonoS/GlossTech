@@ -1,6 +1,9 @@
-﻿Public Class Form_Main
+﻿Imports System.IO
+Public Class Form_Main
 
     Private Sub Btn_Start_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Start.Click
+        Data.Bool_Custom = False
+
         If Me.Rad_Install.Checked = False And Me.Rad_InstCust.Checked = False And Me.Rad_Uninstall.Checked = False And Me.Rad_UninstCust.Checked = False Then
             Form_ErrorMain.Show()
             Me.Enabled = False
@@ -10,15 +13,16 @@
             End If
 
             If Rad_InstCust.Checked = True Then
-                Form_CustomGloss.show()
+                Data.Bool_Custom = True
+                Form_CustomGloss.Show()
             End If
 
             If Rad_Uninstall.Checked = True Then
-                Form_Uninstall.show()
+                Form_Uninstall.Show()
             End If
 
             If Rad_UninstCust.Checked = True Then
-                Form_UninstalCustom.show()
+                Form_UninstalCustom.Show()
             End If
 
             Me.Close()
@@ -46,6 +50,9 @@
     End Sub
 
     Private Sub Form_Main_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        If Not File.Exists("femalehead_base.dds") Or Not File.Exists("malehead_base.dds") Or Not File.Exists("TexBlend/TexBlend.exe") Or Not File.Exists("customhead_base.dds") Then
+            Form_ErrorMisFile.Show()
+            Me.Close()
+        End If
     End Sub
 End Class

@@ -26,7 +26,6 @@ Partial Class Form_Uninstall
         Me.Btn_Uninstall = New System.Windows.Forms.Button()
         Me.Check_Fem = New System.Windows.Forms.CheckBox()
         Me.Check_man = New System.Windows.Forms.CheckBox()
-        Me.Btn_Exit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Lbl_Progress
@@ -67,22 +66,11 @@ Partial Class Form_Uninstall
         Me.Check_man.Text = "Uninstall for man"
         Me.Check_man.UseVisualStyleBackColor = True
         '
-        'Btn_Exit
-        '
-        Me.Btn_Exit.Location = New System.Drawing.Point(109, 231)
-        Me.Btn_Exit.Name = "Btn_Exit"
-        Me.Btn_Exit.Size = New System.Drawing.Size(75, 23)
-        Me.Btn_Exit.TabIndex = 5
-        Me.Btn_Exit.Text = "Exit"
-        Me.Btn_Exit.UseVisualStyleBackColor = True
-        Me.Btn_Exit.Visible = False
-        '
         'Form_Uninstall
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(292, 266)
-        Me.Controls.Add(Me.Btn_Exit)
         Me.Controls.Add(Me.Check_man)
         Me.Controls.Add(Me.Check_Fem)
         Me.Controls.Add(Me.Btn_Uninstall)
@@ -98,5 +86,4 @@ Partial Class Form_Uninstall
     Friend WithEvents Btn_Uninstall As System.Windows.Forms.Button
     Friend WithEvents Check_Fem As System.Windows.Forms.CheckBox
     Friend WithEvents Check_man As System.Windows.Forms.CheckBox
-    Friend WithEvents Btn_Exit As System.Windows.Forms.Button
 End Class
