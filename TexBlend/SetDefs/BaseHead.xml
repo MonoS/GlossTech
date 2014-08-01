@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TextureSet is the main group for texture file definitions. 
+    Each Set strongly correlates to textures within a game data directory, 
+	such as female body textures, outfit textures, etc. 
+	This translates to a top level directory in Source and Library folders.
+	Each texture set contains a series of "channels" and "subsets".
+	A channel is a color information category, such as Normal, Color, and Specular. Channels don't need to be 
+	 named the same as the examples below, but it might be a good idea to avoid confusion.
+	A subset is a subcategorization that corresponds to a variation such as race or item appearance.
+	The TextureSet and subset combined determine the final path of any saved textures
+	Thus, the path of an output file is determined by 
+		[game data path]/[texture set path]/[subset name]/[filename].[fileextension]
+-->
+<TextureSet Name="Head" > 						<!-- textures for the head -->
+	<Path>textures\actors\character</Path>  	<!-- note the lack of leading and training slashes!! -->
+	<SubSet Name="Female">						<!-- Female -- "Nord" race version -->
+		<Channel Name="Color">   				<!-- channel = "Type" in TexBlend -->
+			<FileName>femalehead</FileName>  	<!-- no extension on this filename! -->
+			<FileFormat>dds</FileFormat>		<!-- can be numerous formats (incl. psd, png, bmp, tga, dds, jpg, gif) dds is the common format. -->
+			<Size>2048</Size>					<!-- pixel count for texture width (Assumes height is the same) -->
+			<CompressTex>0</CompressTex>		<!-- 0 for yes, 1 for no.  Normal maps should not be compressed -->
+			<HasAlpha>0</HasAlpha>				<!-- 0 for yes, 1 for no. Whether or not the texture contains transparency -->
+		</Channel>
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+		<Channel Name="Specular">				<!-- Specular map -->
+			<FileName>femalehead_s</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>2048</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+		<Channel Name="Skin">					<!-- Skin map -->
+			<FileName>femalehead_sk</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+	<!-- in skyrim, the difference between the races is just the normal map on the face,
+	      except beast races.  The subsets here only apply to the normal map therefore
+	-->
+	<SubSet Name="BretonFemale">				<!-- Breton race -->
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+	<SubSet Name="DarkElfFemale">				<!-- DarkElf race -->
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+	<SubSet Name="HighElfFemale">				<!-- HighElf race -->
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+	<SubSet Name="ImperialFemale">				<!-- Imperial race -->
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+	<SubSet Name="RedguardFemale">				<!-- Redguard race -->
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+</TextureSet>
+
+<TextureSet Name="BeastHead" > 					<!-- textures for beast heads, which are very different  -->
+	<Path>textures\actors\character</Path> 	
+	<!-- the Beast races addtionally have color and specular maps of their own -->
+	<SubSet Name="ArgonianFemale">				<!-- Argonian race -->
+		<Channel Name="Color">					<!-- Color map -->
+			<FileName>argonianfemalehead</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>2048</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>		
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>argonianfemalehead_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>		
+		<Channel Name="Specular">				<!-- Specular map -->
+			<FileName>argonianfemalehead_s</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>	
+	<SubSet Name="KhajiitFemale">				<!-- Khajiit race -->
+		<Channel Name="Color">					<!-- Color map -->
+			<FileName>femalehead</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>2048</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>		
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehead</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>		
+		<Channel Name="Specular">				<!-- Specular map -->
+			<FileName>femalehead</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+</TextureSet>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TextureSet is the main group for texture file definitions. 
+    Each Set strongly correlates to textures within a game data directory, 
+	such as female body textures, outfit textures, etc. 
+	This translates to a top level directory in Source and Library folders.
+	Each texture set contains a series of "channels" and "subsets".
+	A channel is a color information category, such as Normal, Color, and Specular. Channels don't need to be 
+	 named the same as the examples below, but it might be a good idea to avoid confusion.
+	A subset is a subcategorization that corresponds to a variation such as race or item appearance.
+	The TextureSet and subset combined determine the final path of any saved textures
+	Thus, the path of an output file is determined by 
+		[game data path]/[texture set path]/[subset name]/[filename].[fileextension]
+-->
+<TextureSet Name="Body and Feet" > 				<!-- textures for bodies and feet (they're in the same file) -->
+	<Path>textures\actors\character</Path>  	<!-- note the lack of leading and training slashes!! -->
+	<SubSet Name="Female">						<!-- female body textures -->
+		<Channel Name="Color">   				<!-- channel = "Type" in TexBlend -->
+			<FileName>femalebody_1</FileName>   <!-- no extension on this filename! -->
+			<FileFormat>dds</FileFormat> 	    <!-- can be numerous formats (incl. psd, png, bmp, tga, dds, jpg, gif) dds is the common format. -->
+			<Size>2048</Size>					<!-- pixel count for texture width (Assumes height is the same) -->
+			<CompressTex>0</CompressTex>		<!-- 0 for yes, 1 for no.  Normal maps should not be compressed -->
+			<HasAlpha>0</HasAlpha>				<!-- 0 for yes, 1 for no. Whether or not the texture contains transparency -->
+		</Channel>
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalebody_1_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>					
+			<CompressTex>0</CompressTex>		<!-- never compress normal maps! -->
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+		<Channel Name="Specular">				<!-- Specular map -->
+			<FileName>femalebody_1_s</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+		<Channel Name="Skin">					<!-- Skin map -->
+			<FileName>femalebody_1_sk</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+</TextureSet>
+
+<TextureSet Name="Hands" > 						<!-- textures for hands  -->
+	<Path>textures\actors\character</Path>  	<!-- note the lack of leading and training slashes!! -->
+	<SubSet Name="Female">						<!-- female body textures -->
+		<Channel Name="Color">   				<!-- channel = "Type" in TexBlend -->
+			<FileName>femalehands_1</FileName>  <!-- no extension on this filename! -->
+			<FileFormat>dds</FileFormat>		<!-- can be numerous formats (incl. psd, png, bmp, tga, dds, jpg, gif) dds is the common format. -->
+			<Size>2048</Size>					<!-- pixel count for texture width (Assumes height is the same) -->
+			<CompressTex>0</CompressTex>		<!-- 0 for yes, 1 for no.  Normal maps should not be compressed -->
+			<HasAlpha>0</HasAlpha>				<!-- 0 for yes, 1 for no. Whether or not the texture contains transparency -->
+		</Channel>
+		<Channel Name="Normal">					<!-- Normal map -->
+			<FileName>femalehands_1_msn</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>0</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+		<Channel Name="Specular">				<!-- Specular map -->
+			<FileName>femalehands_1_s</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+		<Channel Name="Skin">					<!-- Skin map -->
+			<FileName>femalehands_1_sk</FileName>
+			<FileFormat>dds</FileFormat>
+			<Size>1024</Size>
+			<CompressTex>1</CompressTex>
+			<HasAlpha>0</HasAlpha>
+		</Channel>
+	</SubSet>
+</TextureSet>
