@@ -88,6 +88,7 @@ Public Class Form_CustomGloss
     Private Sub Btn_Next_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Next.Click
         Dim gloss As Byte
         Dim i As Integer
+        Dim mesh As Integer
 
         If (Me.Rad_HeadAll.Checked = False And Me.Rad_HeadMesh.Checked = False) Or (Me.Rad_HeadMesh.Checked = True And Me.Rad_UseFemMesh.Checked = False And Me.Rad_UseMaleMesh.Checked = False And Me.Rad_UseCustomMesh.Checked = False) Then
             Form_ErrorCustom.Show()
@@ -115,6 +116,14 @@ Public Class Form_CustomGloss
             End If
             If Rad_UseCustomMesh.Checked = True Then
                 Data.Int_CustomHeadType = 3
+            End If
+
+            If Me.Rad_Mesh0.Checked = True Then
+                mesh = 0
+            ElseIf Me.Rad_Mesh1.Checked = True Then
+                mesh = 1
+            ElseIf Me.Rad_Mesh2.Checked = True Then
+                mesh = 2
             End If
 
             Select Case Data.Int_CustomType
@@ -179,7 +188,7 @@ Public Class Form_CustomGloss
             End If
 
             If Data.Bool_HeadMesh = True Then
-                Data.Do_Head_Mesh(Data.Int_CustomHeadType, gloss)
+                Data.Do_Head_Mesh(Data.Int_CustomHeadType, gloss, mesh)
             End If
 
             If Data.Bool_HeadMesh = True Then
@@ -190,7 +199,7 @@ Public Class Form_CustomGloss
             End If
 
             Me.Close()
-        End If
+            End If
     End Sub
 
     Private Sub Rad_CustomFem_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rad_CustomFem.CheckedChanged

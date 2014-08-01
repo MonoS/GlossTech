@@ -28,7 +28,7 @@
     Public Const zero As Byte = 0
     Public Const max As Byte = 255
 
-    Public Function Do_Head_Mesh(ByVal type As Integer, ByVal gloss As Byte)
+    Public Function Do_Head_Mesh(ByVal type As Integer, ByVal gloss As Byte, ByVal mesh As Integer)
 
         Dim i As Integer
         Dim c As Byte
@@ -59,23 +59,50 @@
             i = i + 1
         Loop
 
-        Do While Not EOF(1)
-            FileGet(1, c)
-            FileGet(1, c)
-            FileGet(1, c)
+        Select Case mesh
+            Case 0
+                Do While Not EOF(1)
+                    FileGet(1, c)
+                    FileGet(1, c)
+                    FileGet(1, c)
 
-            If c = 0 Then
-                FilePut(2, gloss)
-                FilePut(2, gloss)
-                FilePut(2, gloss)
-                FilePut(2, Data.max)
-            Else
-                FilePut(2, Data.zero)
-                FilePut(2, Data.zero)
-                FilePut(2, Data.zero)
-                FilePut(2, Data.zero)
-            End If
-        Loop
+                    If c = Data.max Then
+                        FilePut(2, gloss)
+                        FilePut(2, gloss)
+                        FilePut(2, gloss)
+                        FilePut(2, Data.max)
+                    Else
+                        FilePut(2, Data.zero)
+                        FilePut(2, Data.zero)
+                        FilePut(2, Data.zero)
+                        FilePut(2, Data.zero)
+                    End If
+                Loop
+            Case 1
+                Do While Not EOF(1)
+                    FileGet(1, c)
+                    FileGet(1, c)
+                    FileGet(1, c)
+
+                    FilePut(2, gloss)
+                    FilePut(2, gloss)
+                    FilePut(2, gloss)
+                    FilePut(2, c)
+                Loop
+            Case 2
+                Do While Not EOF(1)
+                    FileGet(1, c)
+                    FileGet(1, c)
+                    FileGet(1, c)
+
+                    c = 100 * c / 255
+                    c = gloss * c / 100
+                    FilePut(2, c)
+                    FilePut(2, c)
+                    FilePut(2, c)
+                    FilePut(2, Data.max)
+                Loop
+        End Select
 
         FileClose(1)
         FileClose(2)

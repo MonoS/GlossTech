@@ -32,6 +32,7 @@ Partial Class Form_Main
         Me.Check_Uninstall = New System.Windows.Forms.CheckBox()
         Me.Rad_Uninstall = New System.Windows.Forms.RadioButton()
         Me.Rad_UninstCust = New System.Windows.Forms.RadioButton()
+        Me.Btn_Special = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -67,7 +68,7 @@ Partial Class Form_Main
         '
         'Btn_Start
         '
-        Me.Btn_Start.Location = New System.Drawing.Point(285, 401)
+        Me.Btn_Start.Location = New System.Drawing.Point(285, 343)
         Me.Btn_Start.Name = "Btn_Start"
         Me.Btn_Start.Size = New System.Drawing.Size(195, 53)
         Me.Btn_Start.TabIndex = 4
@@ -140,11 +141,21 @@ Partial Class Form_Main
         Me.Rad_UninstCust.UseVisualStyleBackColor = True
         Me.Rad_UninstCust.Visible = False
         '
+        'Btn_Special
+        '
+        Me.Btn_Special.Location = New System.Drawing.Point(285, 401)
+        Me.Btn_Special.Name = "Btn_Special"
+        Me.Btn_Special.Size = New System.Drawing.Size(195, 53)
+        Me.Btn_Special.TabIndex = 10
+        Me.Btn_Special.Text = "Special features"
+        Me.Btn_Special.UseVisualStyleBackColor = True
+        '
         'Form_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(492, 466)
+        Me.Controls.Add(Me.Btn_Special)
         Me.Controls.Add(Me.Rad_UninstCust)
         Me.Controls.Add(Me.Rad_Uninstall)
         Me.Controls.Add(Me.Check_Uninstall)
@@ -173,5 +184,6 @@ Partial Class Form_Main
     Friend WithEvents Check_Uninstall As System.Windows.Forms.CheckBox
     Friend WithEvents Rad_Uninstall As System.Windows.Forms.RadioButton
     Friend WithEvents Rad_UninstCust As System.Windows.Forms.RadioButton
+    Friend WithEvents Btn_Special As System.Windows.Forms.Button
 
 End Class

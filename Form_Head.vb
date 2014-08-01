@@ -28,8 +28,18 @@ Public Class Form_Head
         Dim gloss_fem As Byte
         Dim gloss_man As Byte
         Dim i As Integer
+        Dim mesh As Integer
         Data.Bool_HeadAll = Me.Rad_HeadAll.Checked
         Data.Bool_HeadMesh = Me.Rad_HeadMesh.Checked
+
+        If Me.Rad_Mesh0.Checked = True Then
+            mesh = 0
+        ElseIf Me.Rad_Mesh1.Checked = True Then
+            mesh = 1
+        ElseIf Me.Rad_Mesh2.Checked = True Then
+            mesh = 2
+        End If
+
 
         REM Female glossing
         If Data.Bool_FemaleGloss = True Then
@@ -101,7 +111,7 @@ Public Class Form_Head
             If Data.Bool_HeadMesh = True Then
                 'Me.Lbl_Progress.Text = Me.Lbl_Progress.Text & "Creating head mesh" & vbNewLine
 
-                Data.Do_Head_Mesh(1, gloss_fem)
+                Data.Do_Head_Mesh(1, gloss_fem, mesh)
 
             End If
         Else
@@ -177,7 +187,7 @@ Public Class Form_Head
             If Data.Bool_HeadMesh = True Then
                 'Me.Lbl_Progress.Text = Me.Lbl_Progress.Text & "Creating head mesh" & vbNewLine
 
-                Data.Do_Head_Mesh(2, gloss_man)
+                Data.Do_Head_Mesh(2, gloss_man, mesh)
 
             End If
 
@@ -204,6 +214,10 @@ Public Class Form_Head
     End Sub
 
     Private Sub Form_Head_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Lbl_ExpStandard.Click
 
     End Sub
 End Class

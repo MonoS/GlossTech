@@ -53,10 +53,12 @@ Partial Class Form_CustomGloss
         Me.Btn_OpenManMesh = New System.Windows.Forms.Button()
         Me.Lbl_ExpOpen = New System.Windows.Forms.Label()
         Me.Btn_OpenFemMesh = New System.Windows.Forms.Button()
-        Me.Lbl_ExpIntensity = New System.Windows.Forms.Label()
-        Me.Lbl_ExpTrasparency = New System.Windows.Forms.Label()
         Me.Rad_Mesh2 = New System.Windows.Forms.RadioButton()
         Me.Rad_Mesh1 = New System.Windows.Forms.RadioButton()
+        Me.Lbl_ExpStandard = New System.Windows.Forms.Label()
+        Me.Lbl_ExpIntensity = New System.Windows.Forms.Label()
+        Me.Lbl_ExpTrasparency = New System.Windows.Forms.Label()
+        Me.Rad_Mesh0 = New System.Windows.Forms.RadioButton()
         CType(Me.Bar_Custom, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Group_Custom.SuspendLayout()
         Me.Group_Head.SuspendLayout()
@@ -142,7 +144,7 @@ Partial Class Form_CustomGloss
         '
         'Btn_Next
         '
-        Me.Btn_Next.Location = New System.Drawing.Point(179, 448)
+        Me.Btn_Next.Location = New System.Drawing.Point(179, 469)
         Me.Btn_Next.Name = "Btn_Next"
         Me.Btn_Next.Size = New System.Drawing.Size(134, 27)
         Me.Btn_Next.TabIndex = 20
@@ -272,18 +274,20 @@ Partial Class Form_CustomGloss
         '
         'Group_Mesh
         '
+        Me.Group_Mesh.Controls.Add(Me.Rad_Mesh0)
+        Me.Group_Mesh.Controls.Add(Me.Lbl_ExpStandard)
+        Me.Group_Mesh.Controls.Add(Me.Lbl_ExpIntensity)
+        Me.Group_Mesh.Controls.Add(Me.Lbl_ExpTrasparency)
         Me.Group_Mesh.Controls.Add(Me.Btn_OpenCustomMesh)
         Me.Group_Mesh.Controls.Add(Me.Panel1)
         Me.Group_Mesh.Controls.Add(Me.Btn_OpenManMesh)
         Me.Group_Mesh.Controls.Add(Me.Lbl_ExpOpen)
         Me.Group_Mesh.Controls.Add(Me.Btn_OpenFemMesh)
-        Me.Group_Mesh.Controls.Add(Me.Lbl_ExpIntensity)
-        Me.Group_Mesh.Controls.Add(Me.Lbl_ExpTrasparency)
         Me.Group_Mesh.Controls.Add(Me.Rad_Mesh2)
         Me.Group_Mesh.Controls.Add(Me.Rad_Mesh1)
         Me.Group_Mesh.Location = New System.Drawing.Point(10, 280)
         Me.Group_Mesh.Name = "Group_Mesh"
-        Me.Group_Mesh.Size = New System.Drawing.Size(468, 162)
+        Me.Group_Mesh.Size = New System.Drawing.Size(468, 183)
         Me.Group_Mesh.TabIndex = 35
         Me.Group_Mesh.TabStop = False
         Me.Group_Mesh.Text = "Mesh option"
@@ -291,7 +295,7 @@ Partial Class Form_CustomGloss
         '
         'Btn_OpenCustomMesh
         '
-        Me.Btn_OpenCustomMesh.Location = New System.Drawing.Point(272, 100)
+        Me.Btn_OpenCustomMesh.Location = New System.Drawing.Point(278, 118)
         Me.Btn_OpenCustomMesh.Name = "Btn_OpenCustomMesh"
         Me.Btn_OpenCustomMesh.Size = New System.Drawing.Size(166, 23)
         Me.Btn_OpenCustomMesh.TabIndex = 8
@@ -303,7 +307,7 @@ Partial Class Form_CustomGloss
         Me.Panel1.Controls.Add(Me.Rad_UseCustomMesh)
         Me.Panel1.Controls.Add(Me.Rad_UseMaleMesh)
         Me.Panel1.Controls.Add(Me.Rad_UseFemMesh)
-        Me.Panel1.Location = New System.Drawing.Point(2, 67)
+        Me.Panel1.Location = New System.Drawing.Point(8, 85)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(453, 27)
         Me.Panel1.TabIndex = 7
@@ -343,7 +347,7 @@ Partial Class Form_CustomGloss
         '
         'Btn_OpenManMesh
         '
-        Me.Btn_OpenManMesh.Location = New System.Drawing.Point(148, 100)
+        Me.Btn_OpenManMesh.Location = New System.Drawing.Point(154, 118)
         Me.Btn_OpenManMesh.Name = "Btn_OpenManMesh"
         Me.Btn_OpenManMesh.Size = New System.Drawing.Size(118, 23)
         Me.Btn_OpenManMesh.TabIndex = 6
@@ -353,7 +357,7 @@ Partial Class Form_CustomGloss
         'Lbl_ExpOpen
         '
         Me.Lbl_ExpOpen.AutoSize = True
-        Me.Lbl_ExpOpen.Location = New System.Drawing.Point(91, 126)
+        Me.Lbl_ExpOpen.Location = New System.Drawing.Point(97, 144)
         Me.Lbl_ExpOpen.Name = "Lbl_ExpOpen"
         Me.Lbl_ExpOpen.Size = New System.Drawing.Size(302, 26)
         Me.Lbl_ExpOpen.TabIndex = 5
@@ -362,39 +366,21 @@ Partial Class Form_CustomGloss
         '
         'Btn_OpenFemMesh
         '
-        Me.Btn_OpenFemMesh.Location = New System.Drawing.Point(24, 100)
+        Me.Btn_OpenFemMesh.Location = New System.Drawing.Point(30, 118)
         Me.Btn_OpenFemMesh.Name = "Btn_OpenFemMesh"
         Me.Btn_OpenFemMesh.Size = New System.Drawing.Size(118, 23)
         Me.Btn_OpenFemMesh.TabIndex = 4
         Me.Btn_OpenFemMesh.Text = "Modify female mesh"
         Me.Btn_OpenFemMesh.UseVisualStyleBackColor = True
         '
-        'Lbl_ExpIntensity
-        '
-        Me.Lbl_ExpIntensity.AutoSize = True
-        Me.Lbl_ExpIntensity.Location = New System.Drawing.Point(97, 46)
-        Me.Lbl_ExpIntensity.Name = "Lbl_ExpIntensity"
-        Me.Lbl_ExpIntensity.Size = New System.Drawing.Size(82, 13)
-        Me.Lbl_ExpIntensity.TabIndex = 3
-        Me.Lbl_ExpIntensity.Text = "For next version"
-        '
-        'Lbl_ExpTrasparency
-        '
-        Me.Lbl_ExpTrasparency.AutoSize = True
-        Me.Lbl_ExpTrasparency.Location = New System.Drawing.Point(97, 24)
-        Me.Lbl_ExpTrasparency.Name = "Lbl_ExpTrasparency"
-        Me.Lbl_ExpTrasparency.Size = New System.Drawing.Size(82, 13)
-        Me.Lbl_ExpTrasparency.TabIndex = 2
-        Me.Lbl_ExpTrasparency.Text = "For next version"
-        '
         'Rad_Mesh2
         '
         Me.Rad_Mesh2.AutoSize = True
         Me.Rad_Mesh2.Enabled = False
-        Me.Rad_Mesh2.Location = New System.Drawing.Point(7, 44)
+        Me.Rad_Mesh2.Location = New System.Drawing.Point(13, 62)
         Me.Rad_Mesh2.Name = "Rad_Mesh2"
         Me.Rad_Mesh2.Size = New System.Drawing.Size(64, 17)
-        Me.Rad_Mesh2.TabIndex = 1
+        Me.Rad_Mesh2.TabIndex = 12
         Me.Rad_Mesh2.TabStop = True
         Me.Rad_Mesh2.Text = "Intensity"
         Me.Rad_Mesh2.UseVisualStyleBackColor = True
@@ -403,19 +389,57 @@ Partial Class Form_CustomGloss
         '
         Me.Rad_Mesh1.AutoSize = True
         Me.Rad_Mesh1.Enabled = False
-        Me.Rad_Mesh1.Location = New System.Drawing.Point(7, 20)
+        Me.Rad_Mesh1.Location = New System.Drawing.Point(13, 38)
         Me.Rad_Mesh1.Name = "Rad_Mesh1"
         Me.Rad_Mesh1.Size = New System.Drawing.Size(84, 17)
-        Me.Rad_Mesh1.TabIndex = 0
+        Me.Rad_Mesh1.TabIndex = 1
         Me.Rad_Mesh1.TabStop = True
         Me.Rad_Mesh1.Text = "Trasparency"
         Me.Rad_Mesh1.UseVisualStyleBackColor = True
+        '
+        'Lbl_ExpStandard
+        '
+        Me.Lbl_ExpStandard.AutoSize = True
+        Me.Lbl_ExpStandard.Location = New System.Drawing.Point(97, 16)
+        Me.Lbl_ExpStandard.Name = "Lbl_ExpStandard"
+        Me.Lbl_ExpStandard.Size = New System.Drawing.Size(243, 13)
+        Me.Lbl_ExpStandard.TabIndex = 11
+        Me.Lbl_ExpStandard.Text = "White = Gloss; Black and Grey = Only trasparency"
+        '
+        'Lbl_ExpIntensity
+        '
+        Me.Lbl_ExpIntensity.AutoSize = True
+        Me.Lbl_ExpIntensity.Location = New System.Drawing.Point(97, 65)
+        Me.Lbl_ExpIntensity.Name = "Lbl_ExpIntensity"
+        Me.Lbl_ExpIntensity.Size = New System.Drawing.Size(254, 13)
+        Me.Lbl_ExpIntensity.TabIndex = 10
+        Me.Lbl_ExpIntensity.Text = "From Black = No gloss to White = Your level of gloss"
+        '
+        'Lbl_ExpTrasparency
+        '
+        Me.Lbl_ExpTrasparency.AutoSize = True
+        Me.Lbl_ExpTrasparency.Location = New System.Drawing.Point(97, 41)
+        Me.Lbl_ExpTrasparency.Name = "Lbl_ExpTrasparency"
+        Me.Lbl_ExpTrasparency.Size = New System.Drawing.Size(273, 13)
+        Me.Lbl_ExpTrasparency.TabIndex = 9
+        Me.Lbl_ExpTrasparency.Text = "From Black = Full trasparency to White = No trasparency"
+        '
+        'Rad_Mesh0
+        '
+        Me.Rad_Mesh0.AutoSize = True
+        Me.Rad_Mesh0.Location = New System.Drawing.Point(13, 16)
+        Me.Rad_Mesh0.Name = "Rad_Mesh0"
+        Me.Rad_Mesh0.Size = New System.Drawing.Size(68, 17)
+        Me.Rad_Mesh0.TabIndex = 0
+        Me.Rad_Mesh0.TabStop = True
+        Me.Rad_Mesh0.Text = "Standard"
+        Me.Rad_Mesh0.UseVisualStyleBackColor = True
         '
         'Form_CustomGloss
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(492, 483)
+        Me.ClientSize = New System.Drawing.Size(492, 508)
         Me.Controls.Add(Me.Group_Mesh)
         Me.Controls.Add(Me.Group_Head)
         Me.Controls.Add(Me.Group_Custom)
@@ -465,8 +489,6 @@ Partial Class Form_CustomGloss
     Friend WithEvents Btn_OpenManMesh As System.Windows.Forms.Button
     Friend WithEvents Lbl_ExpOpen As System.Windows.Forms.Label
     Friend WithEvents Btn_OpenFemMesh As System.Windows.Forms.Button
-    Friend WithEvents Lbl_ExpIntensity As System.Windows.Forms.Label
-    Friend WithEvents Lbl_ExpTrasparency As System.Windows.Forms.Label
     Friend WithEvents Rad_Mesh2 As System.Windows.Forms.RadioButton
     Friend WithEvents Rad_Mesh1 As System.Windows.Forms.RadioButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -474,4 +496,8 @@ Partial Class Form_CustomGloss
     Friend WithEvents Rad_UseMaleMesh As System.Windows.Forms.RadioButton
     Friend WithEvents Rad_UseFemMesh As System.Windows.Forms.RadioButton
     Friend WithEvents Btn_OpenCustomMesh As System.Windows.Forms.Button
+    Friend WithEvents Lbl_ExpStandard As System.Windows.Forms.Label
+    Friend WithEvents Lbl_ExpIntensity As System.Windows.Forms.Label
+    Friend WithEvents Lbl_ExpTrasparency As System.Windows.Forms.Label
+    Friend WithEvents Rad_Mesh0 As System.Windows.Forms.RadioButton
 End Class

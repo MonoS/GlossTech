@@ -104,6 +104,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Special.Designer.vb">
+      <DependentUpon>Form_Special.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Special.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_ErrorUninstalCustomMis.Designer.vb">
       <DependentUpon>Form_ErrorUninstalCustomMis.vb</DependentUpon>
     </Compile>
