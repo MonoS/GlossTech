@@ -116,12 +116,6 @@
     <Compile Include="Form_ErrorUninstall.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Glossing.Designer.vb">
-      <DependentUpon>Form_Glossing.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Glossing.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_ErrorInstall.Designer.vb">
       <DependentUpon>Form_ErrorInstall.vb</DependentUpon>
     </Compile>
@@ -197,9 +191,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Form_ErrorUninstall.resx">
       <DependentUpon>Form_ErrorUninstall.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Glossing.resx">
-      <DependentUpon>Form_Glossing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ErrorInstall.resx">
       <DependentUpon>Form_ErrorInstall.vb</DependentUpon>

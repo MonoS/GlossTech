@@ -24,16 +24,17 @@ Partial Class Form_Head
     Private Sub InitializeComponent()
         Me.Lbl_Title = New System.Windows.Forms.Label()
         Me.Group_Mesh = New System.Windows.Forms.GroupBox()
+        Me.Lbl_ExpOpen = New System.Windows.Forms.Label()
+        Me.Btn_OpenFemMesh = New System.Windows.Forms.Button()
+        Me.Lbl_ExpIntensity = New System.Windows.Forms.Label()
+        Me.Lbl_ExpTrasparency = New System.Windows.Forms.Label()
         Me.Rad_Mesh2 = New System.Windows.Forms.RadioButton()
         Me.Rad_Mesh1 = New System.Windows.Forms.RadioButton()
-        Me.Lbl_ExpTrasparency = New System.Windows.Forms.Label()
-        Me.Lbl_ExpIntensity = New System.Windows.Forms.Label()
         Me.Group_Head = New System.Windows.Forms.GroupBox()
-        Me.Rad_HeadMesh = New System.Windows.Forms.RadioButton()
         Me.Rad_HeadAll = New System.Windows.Forms.RadioButton()
-        Me.Btn_OpenMesh = New System.Windows.Forms.Button()
-        Me.Lbl_ExpOpen = New System.Windows.Forms.Label()
+        Me.Rad_HeadMesh = New System.Windows.Forms.RadioButton()
         Me.Btn_Next = New System.Windows.Forms.Button()
+        Me.Btn_OpenManMesh = New System.Windows.Forms.Button()
         Me.Group_Mesh.SuspendLayout()
         Me.Group_Head.SuspendLayout()
         Me.SuspendLayout()
@@ -50,19 +51,57 @@ Partial Class Form_Head
         '
         'Group_Mesh
         '
+        Me.Group_Mesh.Controls.Add(Me.Btn_OpenManMesh)
         Me.Group_Mesh.Controls.Add(Me.Lbl_ExpOpen)
-        Me.Group_Mesh.Controls.Add(Me.Btn_OpenMesh)
+        Me.Group_Mesh.Controls.Add(Me.Btn_OpenFemMesh)
         Me.Group_Mesh.Controls.Add(Me.Lbl_ExpIntensity)
         Me.Group_Mesh.Controls.Add(Me.Lbl_ExpTrasparency)
         Me.Group_Mesh.Controls.Add(Me.Rad_Mesh2)
         Me.Group_Mesh.Controls.Add(Me.Rad_Mesh1)
         Me.Group_Mesh.Location = New System.Drawing.Point(12, 124)
         Me.Group_Mesh.Name = "Group_Mesh"
-        Me.Group_Mesh.Size = New System.Drawing.Size(468, 102)
+        Me.Group_Mesh.Size = New System.Drawing.Size(468, 129)
         Me.Group_Mesh.TabIndex = 6
         Me.Group_Mesh.TabStop = False
         Me.Group_Mesh.Text = "Mesh option"
         Me.Group_Mesh.Visible = False
+        '
+        'Lbl_ExpOpen
+        '
+        Me.Lbl_ExpOpen.AutoSize = True
+        Me.Lbl_ExpOpen.Location = New System.Drawing.Point(97, 93)
+        Me.Lbl_ExpOpen.Name = "Lbl_ExpOpen"
+        Me.Lbl_ExpOpen.Size = New System.Drawing.Size(302, 26)
+        Me.Lbl_ExpOpen.TabIndex = 5
+        Me.Lbl_ExpOpen.Text = "You need a program like Paint.net for open and save the mesh" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "IMPORTANT: save as " & _
+            "R8G8B8 or will NOT work"
+        '
+        'Btn_OpenFemMesh
+        '
+        Me.Btn_OpenFemMesh.Location = New System.Drawing.Point(120, 67)
+        Me.Btn_OpenFemMesh.Name = "Btn_OpenFemMesh"
+        Me.Btn_OpenFemMesh.Size = New System.Drawing.Size(118, 23)
+        Me.Btn_OpenFemMesh.TabIndex = 4
+        Me.Btn_OpenFemMesh.Text = "Modify female mesh"
+        Me.Btn_OpenFemMesh.UseVisualStyleBackColor = True
+        '
+        'Lbl_ExpIntensity
+        '
+        Me.Lbl_ExpIntensity.AutoSize = True
+        Me.Lbl_ExpIntensity.Location = New System.Drawing.Point(97, 46)
+        Me.Lbl_ExpIntensity.Name = "Lbl_ExpIntensity"
+        Me.Lbl_ExpIntensity.Size = New System.Drawing.Size(82, 13)
+        Me.Lbl_ExpIntensity.TabIndex = 3
+        Me.Lbl_ExpIntensity.Text = "For next version"
+        '
+        'Lbl_ExpTrasparency
+        '
+        Me.Lbl_ExpTrasparency.AutoSize = True
+        Me.Lbl_ExpTrasparency.Location = New System.Drawing.Point(97, 24)
+        Me.Lbl_ExpTrasparency.Name = "Lbl_ExpTrasparency"
+        Me.Lbl_ExpTrasparency.Size = New System.Drawing.Size(82, 13)
+        Me.Lbl_ExpTrasparency.TabIndex = 2
+        Me.Lbl_ExpTrasparency.Text = "For next version"
         '
         'Rad_Mesh2
         '
@@ -88,24 +127,6 @@ Partial Class Form_Head
         Me.Rad_Mesh1.Text = "Trasparency"
         Me.Rad_Mesh1.UseVisualStyleBackColor = True
         '
-        'Lbl_ExpTrasparency
-        '
-        Me.Lbl_ExpTrasparency.AutoSize = True
-        Me.Lbl_ExpTrasparency.Location = New System.Drawing.Point(97, 24)
-        Me.Lbl_ExpTrasparency.Name = "Lbl_ExpTrasparency"
-        Me.Lbl_ExpTrasparency.Size = New System.Drawing.Size(82, 13)
-        Me.Lbl_ExpTrasparency.TabIndex = 2
-        Me.Lbl_ExpTrasparency.Text = "For next version"
-        '
-        'Lbl_ExpIntensity
-        '
-        Me.Lbl_ExpIntensity.AutoSize = True
-        Me.Lbl_ExpIntensity.Location = New System.Drawing.Point(97, 46)
-        Me.Lbl_ExpIntensity.Name = "Lbl_ExpIntensity"
-        Me.Lbl_ExpIntensity.Size = New System.Drawing.Size(82, 13)
-        Me.Lbl_ExpIntensity.TabIndex = 3
-        Me.Lbl_ExpIntensity.Text = "For next version"
-        '
         'Group_Head
         '
         Me.Group_Head.Controls.Add(Me.Rad_HeadAll)
@@ -116,17 +137,6 @@ Partial Class Form_Head
         Me.Group_Head.TabIndex = 7
         Me.Group_Head.TabStop = False
         Me.Group_Head.Text = "Head option"
-        '
-        'Rad_HeadMesh
-        '
-        Me.Rad_HeadMesh.AutoSize = True
-        Me.Rad_HeadMesh.Location = New System.Drawing.Point(7, 20)
-        Me.Rad_HeadMesh.Name = "Rad_HeadMesh"
-        Me.Rad_HeadMesh.Size = New System.Drawing.Size(188, 17)
-        Me.Rad_HeadMesh.TabIndex = 0
-        Me.Rad_HeadMesh.TabStop = True
-        Me.Rad_HeadMesh.Text = "Cover the head following the mesh"
-        Me.Rad_HeadMesh.UseVisualStyleBackColor = True
         '
         'Rad_HeadAll
         '
@@ -139,39 +149,40 @@ Partial Class Form_Head
         Me.Rad_HeadAll.Text = "Cover all the head"
         Me.Rad_HeadAll.UseVisualStyleBackColor = True
         '
-        'Btn_OpenMesh
+        'Rad_HeadMesh
         '
-        Me.Btn_OpenMesh.Location = New System.Drawing.Point(7, 67)
-        Me.Btn_OpenMesh.Name = "Btn_OpenMesh"
-        Me.Btn_OpenMesh.Size = New System.Drawing.Size(118, 23)
-        Me.Btn_OpenMesh.TabIndex = 4
-        Me.Btn_OpenMesh.Text = "Modify the mesh"
-        Me.Btn_OpenMesh.UseVisualStyleBackColor = True
-        '
-        'Lbl_ExpOpen
-        '
-        Me.Lbl_ExpOpen.AutoSize = True
-        Me.Lbl_ExpOpen.Location = New System.Drawing.Point(131, 64)
-        Me.Lbl_ExpOpen.Name = "Lbl_ExpOpen"
-        Me.Lbl_ExpOpen.Size = New System.Drawing.Size(302, 26)
-        Me.Lbl_ExpOpen.TabIndex = 5
-        Me.Lbl_ExpOpen.Text = "You need a program like Paint.net for open and save the mesh" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "IMPORTANT: save as " & _
-            "R8G8B8 or will NOT work"
+        Me.Rad_HeadMesh.AutoSize = True
+        Me.Rad_HeadMesh.Location = New System.Drawing.Point(7, 20)
+        Me.Rad_HeadMesh.Name = "Rad_HeadMesh"
+        Me.Rad_HeadMesh.Size = New System.Drawing.Size(188, 17)
+        Me.Rad_HeadMesh.TabIndex = 0
+        Me.Rad_HeadMesh.TabStop = True
+        Me.Rad_HeadMesh.Text = "Cover the head following the mesh"
+        Me.Rad_HeadMesh.UseVisualStyleBackColor = True
         '
         'Btn_Next
         '
-        Me.Btn_Next.Location = New System.Drawing.Point(194, 232)
+        Me.Btn_Next.Location = New System.Drawing.Point(197, 259)
         Me.Btn_Next.Name = "Btn_Next"
         Me.Btn_Next.Size = New System.Drawing.Size(102, 23)
         Me.Btn_Next.TabIndex = 8
         Me.Btn_Next.Text = "Start glossing"
         Me.Btn_Next.UseVisualStyleBackColor = True
         '
+        'Btn_OpenManMesh
+        '
+        Me.Btn_OpenManMesh.Location = New System.Drawing.Point(244, 67)
+        Me.Btn_OpenManMesh.Name = "Btn_OpenManMesh"
+        Me.Btn_OpenManMesh.Size = New System.Drawing.Size(118, 23)
+        Me.Btn_OpenManMesh.TabIndex = 6
+        Me.Btn_OpenManMesh.Text = "Modify man mesh"
+        Me.Btn_OpenManMesh.UseVisualStyleBackColor = True
+        '
         'Form_Head
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(492, 261)
+        Me.ClientSize = New System.Drawing.Size(492, 289)
         Me.Controls.Add(Me.Btn_Next)
         Me.Controls.Add(Me.Group_Head)
         Me.Controls.Add(Me.Group_Mesh)
@@ -196,7 +207,8 @@ Partial Class Form_Head
     Friend WithEvents Group_Head As System.Windows.Forms.GroupBox
     Friend WithEvents Rad_HeadAll As System.Windows.Forms.RadioButton
     Friend WithEvents Rad_HeadMesh As System.Windows.Forms.RadioButton
-    Friend WithEvents Btn_OpenMesh As System.Windows.Forms.Button
+    Friend WithEvents Btn_OpenFemMesh As System.Windows.Forms.Button
     Friend WithEvents Lbl_ExpOpen As System.Windows.Forms.Label
     Friend WithEvents Btn_Next As System.Windows.Forms.Button
+    Friend WithEvents Btn_OpenManMesh As System.Windows.Forms.Button
 End Class
