@@ -9,7 +9,7 @@ Public Class Form_CustomGloss
     Dim temp6 As String
 
     Private Sub Form_CustomGloss_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Dir_Custom.SelectedPath = AppDomain.CurrentDomain.BaseDirectory
+        Me.Dir_Custom.SelectedPath = Application.StartupPath
         Me.Dir_Custom.Description = "Select the custom race texture folder"
         Me.Dir_Custom.ShowDialog()
 
@@ -289,6 +289,10 @@ Public Class Form_CustomGloss
     End Sub
 
     Private Sub File_Custom_FileOk(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles File_Custom.FileOk
+
+    End Sub
+
+    Private Sub Dir_Custom_HelpRequest(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Dir_Custom.HelpRequest
 
     End Sub
 End Class

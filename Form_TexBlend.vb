@@ -7,9 +7,11 @@ Public Class Form_TexBlend
         startInfo.WorkingDirectory = "TexBlend/"
 
         If Data.Bool_Custom = True Then
-            FileCopy("textures/actors/character/female/femalehead_s.dds", "textures/actors/character/female/femalehead_s.dds.tmp")
-            FileCopy(Data.String_CustomHead, "TexBlend/Source/Head/Specular/customhead_s.dds")
-            File.Delete("textures/actors/character/female/femalehead_s.dds")
+            If File.Exists(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds") Then
+                FileCopy(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds", Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds.tmp")
+                FileCopy(Data.String_CustomHead, Application.StartupPath & "/TexBlend/Source/Head/Specular/customhead_s.dds")
+                File.Delete(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds")
+            End If
 
             Me.Lbl_TexBlend.Text = "Configure TexBlend as the image and press Blend Image then press the button down here"
             Me.Pic_TexBlendMan.Visible = True
@@ -133,11 +135,13 @@ Public Class Form_TexBlend
             Me.Btn_Press.Visible = False
 
             File.Delete(Data.String_CustomHead)
-            FileCopy("textures/actors/character/female/femalehead_s.dds", Data.String_CustomHead)
-            File.Delete("textures/actors/character/female/femalehead_s.dds")
-            FileCopy("textures/actors/character/female/femalehead_s.dds.tmp", "textures/actors/character/female/femalehead_s.dds")
+            FileCopy(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds", Data.String_CustomHead)
+            File.Delete(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds")
+            If File.Exists(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds.tmp") Then
+                FileCopy(Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds.tmp", Application.StartupPath & "/textures/actors/character/female/femalehead_s.dds")
+            End If
 
-            File.Delete("TexBlend/Library/Head/Specular/customhead_s.dds")
+            File.Delete(Application.StartupPath & "/TexBlend/Library/Head/Specular/customhead_s.dds")
             Me.Tmr_Man.Enabled = False
             Form_End.Show()
             Form_End.Lbl_Finish.Text = "Congratulation, you've succesfully installed GlossTech"

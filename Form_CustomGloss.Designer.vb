@@ -64,6 +64,9 @@ Partial Class Form_CustomGloss
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
+        'Dir_Custom
+        '
+        '
         'Rad_Preset5
         '
         Me.Rad_Preset5.AutoSize = True
@@ -251,7 +254,7 @@ Partial Class Form_CustomGloss
         Me.Rad_HeadAll.Location = New System.Drawing.Point(7, 44)
         Me.Rad_HeadAll.Name = "Rad_HeadAll"
         Me.Rad_HeadAll.Size = New System.Drawing.Size(111, 17)
-        Me.Rad_HeadAll.TabIndex = 1
+        Me.Rad_HeadAll.TabIndex = 0
         Me.Rad_HeadAll.TabStop = True
         Me.Rad_HeadAll.Text = "Cover all the head"
         Me.Rad_HeadAll.UseVisualStyleBackColor = True
@@ -262,7 +265,7 @@ Partial Class Form_CustomGloss
         Me.Rad_HeadMesh.Location = New System.Drawing.Point(7, 20)
         Me.Rad_HeadMesh.Name = "Rad_HeadMesh"
         Me.Rad_HeadMesh.Size = New System.Drawing.Size(188, 17)
-        Me.Rad_HeadMesh.TabIndex = 0
+        Me.Rad_HeadMesh.TabIndex = 1
         Me.Rad_HeadMesh.TabStop = True
         Me.Rad_HeadMesh.Text = "Cover the head following the mesh"
         Me.Rad_HeadMesh.UseVisualStyleBackColor = True
