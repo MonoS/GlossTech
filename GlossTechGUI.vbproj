@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFA0C8E3-D4A7-4011-8D38-EF2C19BC9D82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GlossTechGUI.My.MyApplication</StartupObject>
+    <RootNamespace>GlossTechGUI</RootNamespace>
+    <AssemblyName>GlossTechGUI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Documents and Settings\Paolo\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GlossTechGUI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GlossTechGUI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7BE832D8D4945E155C5C165D8CC958316D33B639</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GlossTechGUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_TexBlend.Designer.vb">
+      <DependentUpon>Form_TexBlend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TexBlend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ErrorUninstall.Designer.vb">
+      <DependentUpon>Form_ErrorUninstall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorUninstall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Glossing.Designer.vb">
+      <DependentUpon>Form_Glossing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Glossing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ErrorInstall.Designer.vb">
+      <DependentUpon>Form_ErrorInstall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorInstall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Head.Designer.vb">
+      <DependentUpon>Form_Head.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Head.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ManGloss.Designer.vb">
+      <DependentUpon>Form_ManGloss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ManGloss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CustomGloss.Designer.vb">
+      <DependentUpon>Form_CustomGloss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CustomGloss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Uninstall.Designer.vb">
+      <DependentUpon>Form_Uninstall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Uninstall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UninstalCustom.Designer.vb">
+      <DependentUpon>Form_UninstalCustom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UninstalCustom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ErrorMain.Designer.vb">
+      <DependentUpon>Form_ErrorMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ErrorMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.vb">
+      <DependentUpon>Form_Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FemaleGloss.Designer.vb">
+      <DependentUpon>Form_FemaleGloss.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FemaleGloss.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_ErrorUninstall.resx">
+      <DependentUpon>Form_ErrorUninstall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Glossing.resx">
+      <DependentUpon>Form_Glossing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ErrorInstall.resx">
+      <DependentUpon>Form_ErrorInstall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Head.resx">
+      <DependentUpon>Form_Head.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ManGloss.resx">
+      <DependentUpon>Form_ManGloss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CustomGloss.resx">
+      <DependentUpon>Form_CustomGloss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ErrorMain.resx">
+      <DependentUpon>Form_ErrorMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_FemaleGloss.resx">
+      <DependentUpon>Form_FemaleGloss.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TexBlend.resx">
+      <DependentUpon>Form_TexBlend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UninstalCustom.resx">
+      <DependentUpon>Form_UninstalCustom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Uninstall.resx">
+      <DependentUpon>Form_Uninstall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GlossTechGUI_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\High Gloss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Low Gloss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mid Gloss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No Gloss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ultra Gloss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TexBlendFem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TexBlendMan.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
